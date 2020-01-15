@@ -1,0 +1,9 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=1
+#SBATCH --output=page_fault.txt 
+
+cp page_fault.c $PFSDIR/.
+cd $PFSDIR
+gcc page_fault.c -o page_fault
+/usr/bin/time -v ./page_fault 100

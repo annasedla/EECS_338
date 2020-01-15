@@ -1,0 +1,6 @@
+
+time = 3.7 sec
+time = 5.2 sec
+time = 7.0 sec
+time = 14.2 sec
+

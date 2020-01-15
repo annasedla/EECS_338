@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=8
+#SBATCH --output=q3.txt
+
+cp q3.c $PFSDIR/.
+cd $PFSDIR
+gcc q3.c -o q3 -lm -lrt
+./q3 8
+./q3 6
+./q3 4
+./q3 2

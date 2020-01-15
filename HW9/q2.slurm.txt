@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=9
+#SBATCH --output=q2.txt
+
+cp q2.c $PFSDIR/.
+cd $PFSDIR
+gcc q2.c -o q2 -lpthread -lm
+./q2 8
+./q2 6
+./q2 4
+./q2 2
+./q2 1
